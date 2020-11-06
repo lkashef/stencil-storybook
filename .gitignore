@@ -4,6 +4,7 @@ dist-storybook/
 www/
 loader/
 build/
+coverage
 src/components.d.ts
 storybook-static
 *~

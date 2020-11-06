@@ -1,18 +1,23 @@
 {
+  //THIS WORKS WITH ANGULAR
+  //https://github.com/ionic-team/stencil-component-starter
+  
   "name": "stencil-storybook",
   "beawareofchange": "change aswell scripts:build:storybook --static-dir",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "distDirs": {
     "stencil": "dist-stencil",
     "storybook": "dist-storybook",
     "beawareofchange": "change aswell main,module,es2015,es2017,types,collection and .gitignore"
   },
   "main": "dist-stencil/index.cjs.js",
-  "module": "dist-stencil/index.js",
-  "es2015": "dist-stencil/esm/index.js",
-  "es2017": "dist-stencil/esm/index.js",
-  "types": "dist-stencil/index.d.ts",
+  "module": "dist-stencil/custom-elements/index.js",
+  "es2015": "dist-stencil/esm/index.mjs",
+  "es2017": "dist-stencil/esm/index.mjs",
+  "types": "dist-stencil/custom-elements/index.d.ts",
   "collection": "dist-stencil/collection/collection-manifest.json",
+  "files": ["dist-stencil/"],
+
   "scripts": {
     "npm:install": "npm install",
     "--- development ---": "this is a divider",

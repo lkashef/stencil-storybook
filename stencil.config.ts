@@ -6,7 +6,6 @@ const { name, distDirs } = require('./package.json');
 
 export const config: Config = {
   namespace: name,
-  buildEs5: false,
   taskQueue: 'async',
   plugins: [
     sass({
@@ -22,7 +21,7 @@ export const config: Config = {
     // creates /dist dir
     {
       type: 'dist',
-      dir: distDirs.stencil,
+      dir: `${distDirs.stencil}`,
       copy: [
         // copy fonts into static for storybook and stencil build
         { src: 'fonts' },
@@ -31,7 +30,7 @@ export const config: Config = {
     // one file in es6
     {
       type: 'dist-custom-elements-bundle',
-      dir: distDirs.stencil,
+      dir: `${distDirs.stencil}/custom-elements`,
     },
     // creates readme.md for components
     {
